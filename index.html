@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="Tiziana - Mis XV Años " />
+    <meta property="og:description"
+        content="¡La cuenta regresiva ha comenzado! Descubre los detalles y confirma tu asistencia." />
+
+    <meta property="og:image" content="https://lunofest.github.io/15Tiziana201126/assets/imagenes/miniatura.png" />
+    <meta property="og:url" content="https://lunofest.github.io/15Tiziana201126/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css?v10">
+    <link rel="stylesheet" href="css/normalize.css?v10">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+
+    <script src="js/cache.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+    <title>Tiziana - Mis 15 años</title>
+</head>
+
+<body>
+
+
+
+    <header class="header">
+
+
+
+        <section class="musica">
+            <h2 class="musica_texto" id="titulo_estado">Toca play para reproducir la canción</h2>
+
+            <div class="musica_barra_contenedor">
+                <input type="range" class="musica_barra" id="barra_progreso" value="0" min="0" max="100">
+            </div>
+
+            <div class="musica_controles">
+
+                <button class="musica_boton" id="btn_anterior">
+                    <svg class="musica_icono" viewBox="0 0 24 24">
+                        <path d="M11 19V5l-11 7 11 7zm0-14v14l11-7-11-7z" style="display:none;" />
+                        <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
+                    </svg>
+                </button>
+
+                <button class="musica_boton musica_boton_play" id="btn_play">
+                    <svg class="musica_icono" id="icono_play" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                    <svg class="musica_icono" id="icono_pause" viewBox="0 0 24 24" style="display: none;">
+                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                    </svg>
+                </button>
+
+                <button class="musica_boton" id="btn_siguiente">
+                    <svg class="musica_icono" viewBox="0 0 24 24">
+                        <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
+                    </svg>
+                </button>
+            </div>
+
+            <audio id="audio_elemento" src="assets/musica.mp3"></audio>
+        </section>
+    </header>
+
+    <main>
+        <img class="fondo" src="assets/imagenes/body.webp" alt="">
+
+        <section class="frase">
+
+            <img class="frase__star" src="assets/imagenes/star.webp" alt="">
+
+            <h5 class="frase__paragraph">
+                "Dicen que las mariposas aparecen cuando algo hermoso está por empezar. Esta noche es la mía, y
+                quiero compartirla con ustedes."
+            </h5>
+
+        </section>
+
+
+        <section class="section_fecha">
+            <h2 class="section_fecha_mes">Noviembre</h2>
+            <div class="section_fecha_contenedor">
+                <div class="section_fecha_bloque">
+                    <div class="section_fecha_lineas"></div>
+                    <span class="section_fecha_texto">VIERNES</span>
+                    <div class="section_fecha_lineas"></div>
+                </div>
+
+                <div class="section_fecha_numero">20</div>
+
+                <div class="section_fecha_bloque">
+                    <div class="section_fecha_lineas"></div>
+                    <span class="section_fecha_texto">2026</span>
+                    <div class="section_fecha_lineas"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="temporizador">
+
+            <img class="temporizador__star" src="assets/imagenes/star.webp" alt="">
+            <img class="temporizador__star2" src="assets/imagenes/star.webp" alt="">
+
+            <div class="temporizador_ola temporizador_ola_top">
+                <svg class="temporizador_ola_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path class="temporizador_ola_relleno"
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z">
+                    </path>
+                </svg>
+            </div>
+
+            <h2 class="temporizador_titulo">Faltan</h2>
+
+            <div class="temporizador_marco">
+                <div class="temporizador_marco_esquinas"></div>
+
+                <div class="temporizador_bloque">
+                    <span class="temporizador_numero" id="dias">00</span>
+                    <span class="temporizador_etiqueta">DÍAS</span>
+                </div>
+
+                <div class="temporizador_separador">:</div>
+
+                <div class="temporizador_bloque">
+                    <span class="temporizador_numero" id="horas">00</span>
+                    <span class="temporizador_etiqueta">HORAS</span>
+                </div>
+
+                <div class="temporizador_separador">:</div>
+
+                <div class="temporizador_bloque">
+                    <span class="temporizador_numero temporizador_numero_destacado" id="minutos">00</span>
+                    <span class="temporizador_etiqueta">MINUTOS</span>
+                </div>
+
+
+            </div>
+
+            <div class="temporizador_ola temporizador_ola_bottom">
+                <svg class="temporizador_ola_svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path class="temporizador_ola_relleno"
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z">
+                    </path>
+                </svg>
+            </div>
+
+        </section>
+
+
+        <section class="fotos">
+            <h3 class=" fotos__title" data-aos="fade-up">Book de fotos</h3>
+
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <img src="assets/imagenes/fotos/uno.webp" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/imagenes/fotos/dos.webp" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/imagenes/fotos/tres.webp" />
+                    </div>
+
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="contenedor album" style="display: none;">
+
+            <img class="contenedor__icon" src="assets/imagenes/iconos/fiesta.webp" alt="">
+            <h3 class="contenedor__title">ÁLBUM</h3>
+            <h5 class="contenedor__direccion">Álbum compartido: No incluido</h5>
+            <h5 class="contenedor__direccion">Instagram: </h5>
+            <a class="contenedor__button" href="#">Ver álbum</a>
+
+        </section>
+
+        <section class="contenedor donde">
+
+            <img class="contenedor__icon" src="assets/imagenes/iconos/iglesia.webp" alt="">
+            <h3 class="contenedor__title">MISA</h3>
+            <h5 class="contenedor__direccion">Parroquia San Francisco Solano <br>Av. San Martín, Banda del Río Salí, Tucumán</h5>
+            <h5 class="contenedor__hora">11 de Noviembre del 2026 <br>20:00hs</h5>
+            <a class="contenedor__button" href="https://maps.app.goo.gl/ALCLtuk8GFVEdqpW6?g_st=ic">Ver ubicación</a>
+
+        </section>
+
+
+        <section class="contenedor donde">
+
+            <img class="contenedor__icon" src="assets/imagenes/iconos/fiesta.webp" alt="">
+            <h3 class="contenedor__title">FIESTA</h3>
+            <h5 class="contenedor__direccion">Salón Zeta <br> Balcarce 800, Ingenio Lastenia, Tucumán</h5>
+            <h5 class="contenedor__hora">20 de Noviembre del 2026 <br>21:30hs</h5>
+            <a class="contenedor__button" href="https://maps.app.goo.gl/XpVpF9dpa9fcdCqY7?g_st=ic">Ver ubicación</a>
+
+        </section>
+
+
+        <section class="contenedor itinerario">
+
+            <img class="contenedor__icon" src="assets/imagenes/iconos/itinerario.webp" alt="">
+            <h3 class="contenedor__title">ITINERARIO</h3>
+            <h5 class="contenedor__direccion">Viernes 20 de Noviembre del 2026 <BR></BR> </h5>
+            <h5 class="contenedor__direccion">Ingreso de invitados: 21:30</h5>
+            <h5 class="contenedor__direccion">Mi ingreso: 23:00</h5>
+            <h5 class="contenedor__direccion">Cena: 23:30</h5>
+            <h5 class="contenedor__direccion">Inicio del baile: 00:30</h5>
+            <h5 class="contenedor__direccion">Fin de la fiesta: 05:00</h5>
+
+        </section>
+
+
+        <section class="contenedor dresscode">
+
+            <img class="contenedor__icon" src="assets/imagenes/iconos/drescode.webp" alt="">
+            <h3 class="contenedor__title">DRESSCODE: <br>ELEGANTE</h3>
+            <h5 class="contenedor__direccion">COLORES RESERVADOS PARA LA QUINCEAÑERA: MORADO, PLATEADO Y BLANCO
+            </h5>
+
+            <div class="contenedor__colores">
+                <!-- <div class="contenedores__item"></div> -->
+
+                <div class="contenedores__item1"></div>
+                <div class="contenedores__item3"></div>
+                <div class="contenedores__item contenedores__item2"></div>
+            </div>
+
+            <button class="contenedor__button" id="openLightbox">Ver ejemplo</button>
+
+
+        </section>
+
+        <section class="contenedor playlist" style="display: none;">
+
+            <img class="contenedor__icon" src="assets/imagenes/iconos/musica.webp" alt="">
+            <h3 class="contenedor__title">¿QUÉ CANCION NO PUEDE FALTAR EN MI FIESTA?</h3>
+
+            <div class="contenedor__input">
+                <input class="input__item" type="text" placeholder="tu nombre aqui">
+                <input class="input__item" type="text" placeholder="tu canción recomendada">
+            </div>
+
+            <button class="contenedor__button">Enviar recomendación</button>
+
+
+        </section>
+
+        <section class="contenedor regalos">
+
+            <img class="contenedor__icon" src="assets/imagenes/iconos/regalos.webp" alt="">
+            <h3 class="contenedor__title">EL MEJOR REGALO ES TU PRESENCIA</h3>
+            <h5 class="contenedor__direccion contenedor__direccion2">Quiero que sepas que tu presencia es lo más importante en mi fiesta y si deseas hacerme un presente, podrás dejarlo en mi mesa de regalos,
+                o podés hacerlo por transferencia a mi cuenta...
+            </h5>
+
+            <div class="datos">
+                <div class="datos__cuenta">
+                    <h5 class="datos__banco alias">tiziana-lizarraga</h5>
+                    <button class="datos__button" id="alias">Copiar Alias</button>
+                </div>
+                <div class="datos__cuenta">
+                    <h5 class="datos__banco cbu">0000003100032418539524</h5>
+                    <button class="datos__button" id="cbu">Copiar Cbu</button>
+                </div>
+            </div>
+
+
+
+
+        </section>
+
+        <section class="confirmacion">
+            <h4 class="confirmacion__title">Por favor confirma tu presencia hasta el día 15 de Noviembre del 2026 </h4>
+
+            <div class="confirmacion__asistencia">
+                <button class="asistencia__button" id="siAsistire">Si asistiré</button>
+                <button class="asistencia__button" id="noAsistire">No asistiré</button>
+            </div>
+
+            <div class="confirmacion__inputs">
+                <input type="text" class="confirmacion__input" placeholder="Escribe tu nombre aquí...">
+            </div>
+
+            <button class="contenedor__button" id="btnConfirmarAsistencia">Confirmar a Tiziana</button>
+            <button class="contenedor__button" id="btnConfirmarAsistencia2">Confirmar a Fany</button>
+
+        </section>
+
+        <section class="frase">
+            <h5 class="frase__paragraph">
+                Tu presencia hará de este día más especial. <br> ¡TE ESPERO!
+            </h5>
+        </section>
+    </main>
+
+
+
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <p class="footer__text">
+                    Página creada por <strong>Luno Digitales</strong>
+                    para los 15 años de <strong>Tiziana</strong>.<br>
+                    Todos los derechos reservados. <br>Visítanos en:
+                </p>
+
+            </div>
+
+
+            <a class="footer__site" href="https://www.luno.net.ar" target="_blank" rel="noopener">www.luno.net.ar</a>
+            <div class="footer__social">
+                <p class="footer__follow">Síguenos en nuestras redes</p>
+                <a class="icon-link"
+                    href="https://www.instagram.com/lunodigitales?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    aria-label="Instagram de Luno Digitales">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"
+                            fill="none" />
+                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5" fill="none" />
+                        <circle cx="18.2" cy="5.8" r="0.7" fill="currentColor" />
+                    </svg>
+                </a>
+                <a class="icon-link" href="https://www.facebook.com/profile.php?id=61581720891655" target="_blank"
+                    rel="noopener" aria-label="Facebook de Luno Digitales">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox__content">
+            <button id="closeLightbox" class="lightbox__close">&times;</button>
+            <img src="assets/imagenes/dresscode.webp" alt="Ejemplo Dresscode" class="lightbox__img">
+        </div>
+    </div>
+
+    <script>
+        const btnOpen = document.getElementById('openLightbox');
+        const lightbox = document.getElementById('lightbox');
+        const btnClose = document.getElementById('closeLightbox');
+
+        if (btnOpen && lightbox && btnClose) {
+            btnOpen.addEventListener('click', () => {
+                lightbox.classList.add('active');
+            });
+
+            btnClose.addEventListener('click', () => {
+                lightbox.classList.remove('active');
+            });
+
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    lightbox.classList.remove('active');
+                }
+            });
+        }
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="js/script.js?v10"></script>
+
+</body>
+
+</html>
